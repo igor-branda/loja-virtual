@@ -18,6 +18,10 @@ Projeto final completo desenvolvido para a disciplina de **Web Coding / Programa
   4. **Geovana Araújo** — Matrícula: 0421-3599 — Curso: Ciência da Computação
   5. **Talita Bastos** — Matrícula: 0418-6770 — Curso: Ciência da Computação
 
+* **Links de Acesso ao Projeto:**
+  * **Aplicação Online (Produção):** http://techwave.infinityfreeapp.com
+  * **Repositório no GitHub:** https://github.com/igor-branda/loja-virtual
+
 ---
 
 ## 2. Tecnologias e Arquitetura
