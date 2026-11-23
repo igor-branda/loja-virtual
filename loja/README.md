@@ -1,26 +1,42 @@
-# TechWave Store - Loja Virtual de Eletrônicos & Tecnologia
+<div align="center">
 
-Projeto final completo desenvolvido para a disciplina de **Web Coding / Programação Web Full Stack**. Aplicação web robusta de comércio eletrônico (e-commerce) desenvolvida com **HTML5 semântico, CSS3 responsivo, JavaScript puro (ES6+), PHP 8 (PDO com Prepared Statements) e banco de dados relacional MySQL (InnoDB)**, executado localmente via **XAMPP (Apache + MariaDB/phpMyAdmin)** e integração com a API pública do **ViaCEP**.
+# TechWave Store
+### Loja Virtual de Eletrônicos & Tecnologia
+
+[![PHP 8+](https://img.shields.io/badge/PHP-8.2-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-InnoDB-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+[![Status Online](https://img.shields.io/badge/Status-Online%20em%20Produção-22C55E?style=for-the-badge)](http://techwave.infinityfreeapp.com)
+
+**[Acessar Loja Online](http://techwave.infinityfreeapp.com)** | **[Painel Administrativo](http://techwave.infinityfreeapp.com/admin/login.php)** | **[Repositório no GitHub](https://github.com/igor-branda/loja-virtual)**
+
+</div>
 
 ---
 
 ## 1. Identificação do Projeto e Grupo Discente
 
-* **Instituição de Ensino Superior:** UNAMA - Universidade da Amazônia (Campus Alcindo Cacela)
-* **Disciplina:** PROGRAMAÇÃO - WEB CODING
-* **Professor Responsável:** Mauricio Aldenor Souza dos Santos
-* **Curso:** Ciência da Computação
-* **Título do Projeto:** Projeto Final – Loja Virtual TechWave Store
-* **Integrantes do Grupo:**
-  1. **Igor Brandão Coelho** — Matrícula: 0420-7633 — Curso: Ciência da Computação
-  2. **Rafael Portilho** — Matrícula: 0421-4105 — Curso: Ciência da Computação
-  3. **Amalia Arero** — Matrícula: 0422-3320 — Curso: Ciência da Computação
-  4. **Geovana Araújo** — Matrícula: 0421-3599 — Curso: Ciência da Computação
-  5. **Talita Bastos** — Matrícula: 0418-6770 — Curso: Ciência da Computação
+| Campo | Detalhe |
+| :--- | :--- |
+| **Instituição** | UNAMA - Universidade da Amazônia (Campus Alcindo Cacela) |
+| **Disciplina** | PROGRAMAÇÃO - WEB CODING |
+| **Professor** | Mauricio Aldenor Souza dos Santos |
+| **Curso** | Ciência da Computação |
+| **Título** | Projeto Final – Loja Virtual TechWave Store |
+| **Loja Online** | [http://techwave.infinityfreeapp.com](http://techwave.infinityfreeapp.com) |
+| **Repositório** | [https://github.com/igor-branda/loja-virtual](https://github.com/igor-branda/loja-virtual) |
 
-* **Links de Acesso ao Projeto:**
-  * **Aplicação Online (Produção):** http://techwave.infinityfreeapp.com
-  * **Repositório no GitHub:** https://github.com/igor-branda/loja-virtual
+### Integrantes da Equipe
+
+| Nome Completo | Matrícula | Curso |
+| :--- | :---: | :--- |
+| **Igor Brandão Coelho** | 0420-7633 | Ciência da Computação |
+| **Rafael Portilho** | 0421-4105 | Ciência da Computação |
+| **Amalia Arero** | 0422-3320 | Ciência da Computação |
+| **Geovana Araújo** | 0421-3599 | Ciência da Computação |
+| **Talita Bastos** | 0418-6770 | Ciência da Computação |
 
 ---
 
@@ -29,7 +45,7 @@ Projeto final completo desenvolvido para a disciplina de **Web Coding / Programa
 * **Frontend:**
   - **HTML5:** Marcação semântica (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<form>` com validações nativas e acessibilidade).
   - **CSS3 Moderno:** Mobile-first, Flexbox, CSS Grid, Variáveis CSS (`:root`), efeitos de hover, microanimações e responsividade total para celulares, tablets e computadores.
-  - **JavaScript Puro (ES6+):** Sem bibliotecas externas pesadas; manipulação assíncrona com `fetch` (AJAX), máscaras de entrada (CPF, CEP, telefone), validação de formulários em tempo real e integração com a API ViaCEP.
+  - **JavaScript Puro (ES6+):** Sem bibliotecas externas; manipulação assíncrona com `fetch` (AJAX), máscaras de entrada (CPF, CEP, telefone), validação de formulários em tempo real e integração com a API ViaCEP.
 * **Backend:**
   - **PHP 8+:** Estruturado sem frameworks, com código limpo, modularizado e reutilizável (`includes/`).
   - **PDO (PHP Data Objects):** Prepared Statements nativos em 100% das consultas para blindagem contra **SQL Injection**.
@@ -40,7 +56,7 @@ Projeto final completo desenvolvido para a disciplina de **Web Coding / Programa
     * Prevenção contra fixação de sessão com `session_regenerate_id(true)`.
     * **Transações Atômicas PDO (`beginTransaction`, `commit`, `rollBack`):** Bloqueio pessimista de registros (`SELECT ... FOR UPDATE`) durante o checkout, garantindo consistência no estoque e integridade de preços históricos.
 * **Banco de Dados:**
-  - **MySQL / MariaDB (XAMPP):** Charset `utf8mb4` e collation `utf8mb4_unicode_ci`.
+  - **MySQL / MariaDB (XAMPP e InfinityFree):** Charset `utf8mb4` e collation `utf8mb4_unicode_ci`.
   - **Engine InnoDB:** Suporte obrigatório a integridade referencial, transações ACID e chaves estrangeiras (`FOREIGN KEY`) visíveis no **Designer do phpMyAdmin**.
 * **API Externa:**
   - **ViaCEP:** `https://viacep.com.br/ws/{CEP}/json/` para preenchimento de endereço e cálculo de frete por estado.
@@ -49,7 +65,7 @@ Projeto final completo desenvolvido para a disciplina de **Web Coding / Programa
 
 ## 3. Modelo de Relacionamento do Banco de Dados
 
-O banco de dados `loja_virtual` é normalizado e possui as 6 tabelas relacionais em **InnoDB**:
+O banco de dados relacional é normalizado e possui 6 tabelas estruturadas em **InnoDB**:
 
 ```
 [ categorias ] (1) ───────< (N) [ produtos ]
@@ -66,9 +82,6 @@ O banco de dados `loja_virtual` é normalizado e possui as 6 tabelas relacionais
 3. **`compras` (1) — (N) `itens_compra`:** Cada compra possui um ou mais itens adquiridos (`ON UPDATE CASCADE ON DELETE CASCADE`).
 4. **`produtos` (1) — (N) `itens_compra`:** Cada produto pode constar em múltiplos itens de compra com **preço unitário histórico congelado**.
 5. **`administradores`:** Gestão dos usuários lojistas com senhas em hash.
-
-> **Visualização no phpMyAdmin:**  
-> Ao selecionar o banco `loja_virtual` no phpMyAdmin, clique em **Mais > Designer** para visualizar o diagrama interativo com todas as linhas de ligação das chaves estrangeiras.
 
 ---
 
@@ -88,15 +101,15 @@ O frete é calculado dinamicamente com base na Unidade Federativa (UF) retornada
 
 ## 5. Credenciais de Teste para Avaliação
 
-O script SQL já inclui usuários prontos para teste imediato do professor:
-
 ### Acesso do Cliente
-* **Página de Login:** `http://localhost/loja/login.php`
-* **Usuário 1:** `carlos@email.com` | **Senha:** `cliente123` *(Cliente de Belém - PA com compras no histórico)*
-* **Usuário 2:** `mariana@email.com` | **Senha:** `cliente123` *(Cliente de São Paulo - SP)*
+* **Online:** [http://techwave.infinityfreeapp.com/login.php](http://techwave.infinityfreeapp.com/login.php)
+* **Local (XAMPP):** `http://localhost/loja/login.php`
+* **Usuário 1:** `carlos@email.com` | **Senha:** `cliente123` *(Cliente com compras no histórico)*
+* **Usuário 2:** `mariana@email.com` | **Senha:** `cliente123`
 
 ### Acesso Administrativo (Lojista)
-* **Página de Login Admin:** `http://localhost/loja/admin/login.php`
+* **Online:** [http://techwave.infinityfreeapp.com/admin/login.php](http://techwave.infinityfreeapp.com/admin/login.php)
+* **Local (XAMPP):** `http://localhost/loja/admin/login.php`
 * **Usuário:** `admin` | **Senha:** `admin123`
 
 ---
@@ -114,13 +127,11 @@ O script SQL já inclui usuários prontos para teste imediato do professor:
 3. **Importe o Banco de Dados no phpMyAdmin:**
    - Abra seu navegador e acesse: `http://localhost/phpmyadmin`
    - Clique na aba superior **Importar**.
-   - Clique em **Escolher arquivo** e selecione o arquivo:  
-     `C:\xampp\htdocs\loja\sql\banco.sql`
-   - Role até o final da página e clique em **Importar / Executar**.  
-     *(O script criará o banco `loja_virtual`, todas as tabelas em InnoDB com suas chaves estrangeiras e a carga inicial de produtos, categorias, clientes e compras).*
+   - Clique em **Escolher arquivo** e selecione: `C:\xampp\htdocs\loja\sql\banco.sql`
+   - Role até o final da página e clique em **Importar / Executar**.
 
 4. **Acesse a Aplicação:**
-   - **Loja Virtual (Vitrine):** `http://localhost/loja` ou `http://localhost/loja/index.php`
+   - **Loja Virtual:** `http://localhost/loja`
    - **Painel Administrativo:** `http://localhost/loja/admin/login.php`
 
 ---
@@ -129,44 +140,45 @@ O script SQL já inclui usuários prontos para teste imediato do professor:
 
 ```
 loja/
-├── index.php                  # Página inicial / vitrine com busca e filtro
-├── produto.php                # Página de detalhes, estoque e seletor de quantidade
-├── carrinho.php               # Carrinho de compras com tabela e cálculo de frete
-├── checkout.php               # Checkout com transação PDO (lock for update e baixa de estoque)
+├── index.php                  # Vitrine com busca e filtro por categoria
+├── produto.php                # Detalhes, especificações e estoque em tempo real
+├── carrinho.php               # Carrinho de compras e cálculo de frete
+├── checkout.php               # Checkout com transação ACID e lock de estoque
 ├── pedido_confirmado.php      # Recibo de compra com número e dados de pagamento
-├── meus_pedidos.php           # Histórico de compras realizadas pelo cliente logado
-├── cadastro_cliente.php       # Cadastro de clientes com autopreenchimento ViaCEP
-├── login.php                  # Login de clientes com password_verify
-├── logout.php                 # Encerramento de sessão do cliente
+├── meus_pedidos.php           # Histórico de compras do cliente logado
+├── cadastro_cliente.php       # Cadastro com autopreenchimento ViaCEP
+├── login.php                  # Login com verificação de hash
+├── logout.php                 # Encerramento seguro de sessão
 ├── admin/
-│   ├── login.php              # Login exclusivo de administrador
-│   ├── index.php              # Dashboard gerencial com métricas de vendas e estoque
-│   ├── cadastro_produto.php   # Cadastro de produtos com upload seguro de imagens
+│   ├── login.php              # Acesso restrito de administradores
+│   ├── index.php              # Dashboard gerencial com métricas
+│   ├── cadastro_produto.php   # Cadastro de produtos com upload seguro
 │   ├── listar_produtos.php    # Catálogo com edição e inativação por integridade
 │   ├── editar_produto.php     # Edição de características, estoque e foto
 │   ├── listar_compras.php     # Gestão de compras e alteração de status
 │   ├── logout.php             # Encerramento de sessão administrativa
-│   ├── admin_header.php       # Topbar de navegação restrita do administrador
+│   ├── admin_header.php       # Topbar de navegação restrita
 │   └── admin_footer.php       # Rodapé do painel administrativo
 ├── api/
-│   ├── carrinho.php           # API RESTful (JSON) para manipulação assíncrona do carrinho
-│   └── frete.php              # API (JSON) para cálculo de frete com regras regionais
+│   ├── carrinho.php           # API RESTful (JSON) para manipulação assíncrona
+│   └── frete.php              # API (JSON) para cálculo de frete regional
 ├── includes/
-│   ├── conexao.php            # Conexão PDO segura com tratamento de erros
-│   ├── funcoes.php            # Funções utilitárias (sessão, CSRF, XSS, CPF, formatações)
-│   ├── header.php             # Top banner, barra de busca, menu e badge do carrinho
-│   └── footer.php             # Rodapé institucional, selos de segurança e scripts
+│   ├── conexao.php            # Conexão PDO híbrida (InfinityFree ou XAMPP)
+│   ├── funcoes.php            # Funções utilitárias (sessão, CSRF, XSS, validações)
+│   ├── header.php             # Top banner, barra de busca, menu e badge
+│   └── footer.php             # Rodapé institucional e selos de segurança
 ├── assets/
 │   ├── css/
 │   │   └── style.css          # Estilização completa, variáveis :root e responsividade
 │   ├── js/
-│   │   ├── carrinho.js        # Lógica AJAX do carrinho e notificação
+│   │   ├── carrinho.js        # Lógica AJAX do carrinho e notificações
 │   │   ├── cep.js             # Integração com ViaCEP e cálculo dinâmico de frete
 │   │   └── validacoes.js      # Máscaras de entrada (CPF, CEP, telefone) e validações
 │   └── img/                   # Logotipo oficial e 12 ilustrações vetoriais dos produtos
 ├── uploads/                   # Diretório de destino dos uploads do painel admin
 ├── sql/
-│   └── banco.sql              # Script DDL/DML completo e reimportável
+│   ├── banco.sql              # Script DDL/DML para XAMPP local
+│   └── banco_infinityfree.sql # Script DDL/DML configurado para InfinityFree
 └── README.md                  # Documentação completa do projeto
 ```
 
