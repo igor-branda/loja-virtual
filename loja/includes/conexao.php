@@ -4,16 +4,31 @@
  * PROJETO FINAL: LOJA VIRTUAL - TechWave Store
  * Arquivo: includes/conexao.php
  * Conexão com o banco de dados MySQL/MariaDB utilizando PDO
+ * Suporte Híbrido: Funciona automaticamente no InfinityFree (Nuvem) e no XAMPP (Local)
  * ==============================================================================
  */
 
-// Configurações de conexão padrão do ambiente XAMPP
-$db_host = 'localhost';
-$db_port = '3306';
-$db_name = 'loja_virtual';
-$db_user = 'root';
-$db_pass = '';
-$db_charset = 'utf8mb4';
+// Detecta se a aplicação está rodando na nuvem (InfinityFree) ou localmente (XAMPP)
+$hostAtual = $_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? '';
+$isNuvem = (str_contains($hostAtual, 'infinityfree') || str_contains($hostAtual, 'epizy'));
+
+if ($isNuvem) {
+    // Configurações do Servidor de Hospedagem na Nuvem (InfinityFree)
+    $db_host = 'sql205.infinityfree.com';
+    $db_port = '3306';
+    $db_name = 'if0_43517325_loja';
+    $db_user = 'if0_43517325';
+    $db_pass = 'CNOTmGCX8Z6Ea';
+    $db_charset = 'utf8mb4';
+} else {
+    // Configurações Padrão do Ambiente Local (XAMPP phpMyAdmin)
+    $db_host = 'localhost';
+    $db_port = '3306';
+    $db_name = 'loja_virtual';
+    $db_user = 'root';
+    $db_pass = '';
+    $db_charset = 'utf8mb4';
+}
 
 // Data Source Name (DSN)
 $dsn = "mysql:host={$db_host};port={$db_port};dbname={$db_name};charset={$db_charset}";
@@ -31,11 +46,11 @@ try {
     $pdo = new PDO($dsn, $db_user, $db_pass, $opcoes);
 } catch (PDOException $e) {
     // Registra o erro no log interno do servidor Apache/PHP
-    error_log("Erro de Conexão com o Banco de Dados [loja_virtual]: " . $e->getMessage());
+    error_log("Erro de Conexão com o Banco de Dados [{$db_name}]: " . $e->getMessage());
     
-    // Não expõe detalhes sensíveis do servidor ao usuário final
+    // Mensagem amigável de erro
     die("<div style='font-family:sans-serif; text-align:center; padding:50px;'>
             <h2 style='color:#ef4444;'>Ops! Falha ao conectar ao banco de dados.</h2>
-            <p>Certifique-se de que o MySQL está ativo no XAMPP Control Panel e que o script <code>sql/banco.sql</code> foi importado no phpMyAdmin.</p>
+            <p>Se estiver no XAMPP, verifique se o MySQL está ativo. Se estiver no InfinityFree, verifique o banco de dados.</p>
          </div>");
 }
