@@ -16,27 +16,16 @@
 
 ---
 
-## 1. Identificação do Projeto e Grupo Discente
+## 1. Informações do Projeto
 
 | Campo | Detalhe |
 | :--- | :--- |
 | **Instituição** | UNAMA - Universidade da Amazônia (Campus Alcindo Cacela) |
 | **Disciplina** | PROGRAMAÇÃO - WEB CODING |
-| **Professor** | Mauricio Aldenor Souza dos Santos |
 | **Curso** | Ciência da Computação |
 | **Título** | Projeto Final – Loja Virtual TechWave Store |
 | **Loja Online** | [http://techwave.infinityfreeapp.com](http://techwave.infinityfreeapp.com) |
 | **Repositório** | [https://github.com/igor-branda/loja-virtual](https://github.com/igor-branda/loja-virtual) |
-
-### Integrantes da Equipe
-
-| Nome Completo | Matrícula | Curso |
-| :--- | :---: | :--- |
-| **Igor Brandão Coelho** | 0420-7633 | Ciência da Computação |
-| **Rafael Portilho** | 0421-4105 | Ciência da Computação |
-| **Amalia Arero** | 0422-3320 | Ciência da Computação |
-| **Geovana Araújo** | 0421-3599 | Ciência da Computação |
-| **Talita Bastos** | 0418-6770 | Ciência da Computação |
 
 ---
 
