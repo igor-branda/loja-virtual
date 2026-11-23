@@ -3,5 +3,7 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Zips de suporte
-antigravity-*.zip
+# Documentos e arquivos compactados de entrega (entregar via Teams)
+*.zip
+*.docx
+ENTREGA_PROJETO_FINAL/
